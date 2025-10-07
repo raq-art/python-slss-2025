@@ -12,3 +12,12 @@ if weather.lower().strip("!.?,") == "rainy":
     print("You should bring an umbrella.")
 else:
     print("I see...")
+
+# Ask the customer if they want fries
+fries_reply = input("Do you want fries?")
+
+# "Yes!"
+if "yes" in fries_reply.lower():
+    print("Here are your fries.")
+else:
+    print("OK. You will not have fries.")
