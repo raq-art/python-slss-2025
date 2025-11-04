@@ -7,31 +7,24 @@ def say_hello():
 
 
 # function to print a persoalized hello
-# our example from notes-3-functions.py
-# defauult name -> "Tiger"
-def say_hello_personal(name="Tiger": str):
-	print(f"hello {name}")
+def say_hello_personal(name: str):
+    print(f"hello {name}!")
 
-say_hello_personal("David")
-say_hello_personal()
+
+say_hello_personal("Coco")
+say_hello_personal("Alicia")
 
 
 def normalized_input():
     """Clean up the user's input"""
     output = input()
-    output.strip(".,?!").lower
+    output = output.lower().strip(".,?!")
     return output
 
 
-def some_fun():
-    print("hello")
+# Ask the user for the weather
+print("What's the weather like?")
+weather_reply = normalized_input()
 
-
-def some_fun_return() -> str:
-    print("hello!")
-    return "purple monkey dishwasher!"
-    print("does this run?")  # this does't
-
-
-#return_val = some_fun_return()
-#print(return_val)
+if weather_reply == "rainy":
+    print("you should briing an umbrella.")
