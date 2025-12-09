@@ -70,12 +70,12 @@ def sort_songs(songs: list[list[str]], col: int, ascending=True) -> list[list[st
             this_songs_val = helper_spotify.string_to_num(songs[j][col])
             if ascending:
                 this_songs_val = helper_spotify.string_to_num(songs[j][col])
-                if this_songs_val > candidate_idx:
+                if this_songs_val < candidate_idx:
                     candidate_val = this_songs_val
                     candidate_idx = j
 
             else:
-                if this_songs_val < candidate_val:
+                if this_songs_val > candidate_val:
                     candidate_val = this_songs_val
                     candidate_idx = j
 
