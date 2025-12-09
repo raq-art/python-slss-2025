@@ -92,11 +92,11 @@ if __name__ == "__main__":
     # get a list of all songs from "Taylor Swift"
     eds_songs = helper_spotify.songs_by_artist("data/spotify2024.csv", "Ed Sheeran")
     # artist -> col 11
-    sorted_yt_songs = sort_songs(eds_songs, 15, ascending=False)
+    sorted_yt_songs = sort_songs(eds_songs, 11, ascending=False)
     sorted_list = selection_sort([1, 43, 55, -11, 100, 34])
 
 
 print("Ed's songs")
 for song in sorted_yt_songs:
     print("-----------------")
-    print(song[0], "\t", song[15])
+    print(song[0], "\t", song[11])
