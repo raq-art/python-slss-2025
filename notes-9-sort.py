@@ -70,12 +70,12 @@ def sort_songs(songs: list[list[str]], col: int, ascending=True) -> list[list[st
             this_songs_val = helper_spotify.string_to_num(songs[j][col])
             if ascending:
                 this_songs_val = helper_spotify.string_to_num(songs[j][col])
-                if this_songs_val < candidate_idx:
+                if this_songs_val > candidate_idx:
                     candidate_val = this_songs_val
                     candidate_idx = j
 
             else:
-                if this_songs_val > candidate_val:
+                if this_songs_val < candidate_val:
                     candidate_val = this_songs_val
                     candidate_idx = j
 
@@ -92,11 +92,11 @@ if __name__ == "__main__":
     # get a list of all songs from "Taylor Swift"
     eds_songs = helper_spotify.songs_by_artist("data/spotify2024.csv", "Ed Sheeran")
     # artist -> col 11
-    sorted_yt_songs = sort_songs(eds_songs, 11, ascending=True)
+    sorted_yt_songs = sort_songs(eds_songs, 15, ascending=False)
     sorted_list = selection_sort([1, 43, 55, -11, 100, 34])
 
 
 print("Ed's songs")
 for song in sorted_yt_songs:
     print("-----------------")
-    print(song[0], "\t", song[11])
+    print(song[0], "\t", song[15])
