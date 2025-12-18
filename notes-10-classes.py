@@ -33,6 +33,35 @@ class Pokemon:
         print(f"    Level: {self.level}")
         print(" -----------------------")
 
+    def dance(self):
+        """Make the pokemon dance"""
+        print(f"{self.name} uses rain dance, boosting water type moves.")
+
+
+class Squirtle(Pokemon):
+    def __init__(self):
+        # call the constructor of pokemon
+        super().__init__()
+        self.name = "Squirtle"
+        self.species = "Squirtle"
+        self.type = "Water"
+
+    def water_gun(self):
+        """squirtle shoots water out of its mouth"""
+        print(f"{self.name} used water gun!")
+
+
+class Gengar(Pokemon):
+    def __init__(self):
+        super().__init__()
+        self.name = "gengar"
+        self.species = "gegar"
+        self.type = "Ghost", "Poison"
+
+    def shadow_sneak(self):
+        """Gengar extends its shadow and attacks from behind"""
+        print(f"{self.name} uses shadow sneak......")
+
 
 if __name__ == "__main__":
     # Create a pokemon object
@@ -61,3 +90,14 @@ if __name__ == "__main__":
     pokemon_two.talk()
     # display sttats of pokemo 1
     pokemon_one.stats()
+    pokemon_one.dance()
+
+    gengar_one = Gengar()
+    squirtle_one = Squirtle()
+    # use .water gun
+    squirtle_one.water_gun()
+    # use .talk
+    squirtle_one.talk()
+
+    gengar_one.talk()
+    gengar_one.shadow_sneak()
